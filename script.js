@@ -1,7 +1,16 @@
 function playGame() {
 let computerScore = 0;
 let humanScore = 0;
+// const r = document.querySelector('#rock');
+// const p = document.querySelector('#paper');
+// const s = document.querySelector('#scissors');
+const buttons = document.querySelectorAll('.btn');
 
+buttons.forEach(button => {
+        button.addEventListener('click', () => {
+                console.log('you clicked the button.');
+        });
+});
 
 function getComputerChoice() {
     let randomNumber = Math.random();
@@ -15,10 +24,10 @@ function getComputerChoice() {
 }
 }
 
-function getHumanChoice() {
-    let Choice = prompt('rock, paper or scissors?');
-    return Choice.toLowerCase();
-}
+// function getHumanChoice() {
+//     let Choice = prompt('rock, paper or scissors?');
+//     return Choice.toLowerCase();
+// }
 
 function playRound(humanSelection, computerSelection) {
         if (humanSelection === computerSelection)
@@ -60,4 +69,13 @@ else console.log("IT'S A TIE")
 console.log('----------------------------------------------------')
 
 }
+
+// const buttons = document.querySelectorAll('.btn');
+
+// buttons.forEach(button => {
+//         button.addEventListener('click', () => {
+//                 console.log('you clicked the button.');
+//         });
+// });
+
 playGame();
