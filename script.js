@@ -34,7 +34,7 @@ function playRound(humanSelection, computerSelection) {
         }
         else {
                 computerScore++;
-                return "loser." 
+                return "loser.";
         }
 }
 
@@ -45,19 +45,20 @@ buttons.forEach(button => {
 
                 let result = playRound(humanSelection, computerSelection);
                 console.log(result);
-                console.log(`Your score: ${humanScore}. Opponent: ${computerScore}`)
+                console.log(`Your score: ${humanScore}. Opponent: ${computerScore}`);
 
-                console.log('----------------------------------------------------')
+                if (humanScore === 5 || computerScore === 5) {
+                console.log('----------------------------------------------------');
                 if (humanScore > computerScore) {
-                console.log('CONGRATS YOU WIN')
+                console.log('CONGRATS YOU WIN');
         }       
                 else if (humanScore < computerScore) {
-                 console.log('YOU LOST GO HOME LOSER')
+                 console.log('YOU LOST GO HOME LOSER');
         }
-                else console.log("IT'S A TIE")
+                else console.log("IT'S A TIE");
 
-               console.log('----------------------------------------------------')
-        });
+               console.log('----------------------------------------------------');
+        }});
 });
 
 
