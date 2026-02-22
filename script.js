@@ -2,6 +2,7 @@ let computerScore = 0;
 let humanScore = 0;
 
 const buttons = document.querySelectorAll('.btn');
+const resetBtn = document.querySelector('.reset');
 
 
 function getComputerChoice() {
@@ -38,6 +39,12 @@ function playRound(humanSelection, computerSelection) {
         }
 }
 
+function disableButtons() {
+        buttons.forEach(button => {
+                button.disabled = true;
+        });
+}
+
 buttons.forEach(button => {
         button.addEventListener('click', () => {
                 const humanSelection = button.id;
@@ -58,6 +65,7 @@ buttons.forEach(button => {
                 else console.log("IT'S A TIE");
 
                console.log('----------------------------------------------------');
+               disableButtons();
         }});
 });
 
