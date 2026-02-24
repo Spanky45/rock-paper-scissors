@@ -2,7 +2,7 @@ let computerScore = 0;
 let humanScore = 0;
 
 const buttons = document.querySelectorAll('.btn');
-const resetBtn = document.querySelector('.reset');
+const resetBtn = document.querySelector('#reset');
 
 
 function getComputerChoice() {
@@ -66,9 +66,28 @@ buttons.forEach(button => {
 
                console.log('----------------------------------------------------');
                disableButtons();
+               resetBtn.hidden = false;
         }});
 });
 
+function enableButtons() {
+  buttons.forEach(button => {
+    button.disabled = false;
+  });
+}
+
+function resetGame() {
+  humanScore = 0;
+  computerScore = 0;
+
+  enableButtons();
+  resetBtn.hidden = true;
+
+  console.clear();
+  console.log('New game started!');
+}
+
+resetBtn.addEventListener('click', resetGame);
 
 // function playGame() {
 // const r = document.querySelector('#rock');
