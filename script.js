@@ -4,6 +4,14 @@ let humanScore = 0;
 const buttons = document.querySelectorAll('.btn');
 const resetBtn = document.querySelector('#reset');
 
+const humanUi = document.querySelector('#human-score');
+const computerUi = document.querySelector('#computer-score');
+
+function updateUi() {
+        humanUi.textContent = humanScore;
+        computerUi.textContent = computerScore;
+}
+
 
 function getComputerChoice() {
     let randomNumber = Math.random();
@@ -51,6 +59,7 @@ buttons.forEach(button => {
                 const computerSelection = getComputerChoice();
 
                 let result = playRound(humanSelection, computerSelection);
+                updateUi();
                 console.log(result);
                 console.log(`Your score: ${humanScore}. Opponent: ${computerScore}`);
 
