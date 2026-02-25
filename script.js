@@ -88,6 +88,7 @@ function enableButtons() {
 function resetGame() {
   humanScore = 0;
   computerScore = 0;
+  updateUi();
 
   enableButtons();
   resetBtn.hidden = true;
