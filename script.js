@@ -6,6 +6,9 @@ const resetBtn = document.querySelector('#reset');
 
 const humanUi = document.querySelector('#human-score');
 const computerUi = document.querySelector('#computer-score');
+const gameText = document.querySelector('.game-text');
+
+// function updateGameText()
 
 function updateUi() {
         humanUi.textContent = humanScore;

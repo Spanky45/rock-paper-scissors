@@ -59,3 +59,9 @@ body {
 p {
     margin: 0;
 }
+
+.game-text {
+    text-align: center;
+    font-family: silkscreen;
+    font-size: 25px;
+}
