@@ -60,8 +60,18 @@ p {
     margin: 0;
 }
 
-.game-text {
+#game-message {
     text-align: center;
     font-family: silkscreen;
     font-size: 25px;
+}
+
+.message-area {
+    text-align: center;
+    font-family: silkscreen;
+    font-size: 20px;
+    margin-top: 20px;
+    min-height: 30px; 
+    max-height: 500px;
+    overflow-y: auto;
 }
